@@ -18,7 +18,7 @@ flooding_process = None
 flooding_command = None
 
 
-DEFAULT_THREADS = 200
+DEFAULT_THREADS = 100
 
 
 users = {}
@@ -85,11 +85,11 @@ async def genkey(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 save_keys()
                 response = f"Key generated: {key}\nExpires on: {expiration_date}"
             except ValueError:
-                response = f"Please specify a valid number and unit of time (hours/days) script by OWNER- @{OWNER_USERNAME}..."
+                response = f"Please specify a valid number and unit of time (hours/days) script by OWNER- @{Neyooo00}..."
         else:
             response = "Usage: /genkey <amount> <hours/days>"
     else:
-        response = f"ONLY OWNER CAN USE💀OWNER OWNER- @{OWNER_USERNAME}..."
+        response = f"ONLY OWNER CAN USE💀OWNER OWNER- @{Neyooo00}..."
 
     await update.message.reply_text(response)
 
@@ -110,11 +110,11 @@ async def redeem(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             save_users()
             del keys[key]
             save_keys()
-            response = f"✅Key redeemed successfully! Access granted until: {users[user_id]} OWNER- @{OWNER_USERNAME}..."
+            response = f"✅Key redeemed successfully! Access granted until: {users[user_id]} OWNER- @{Neyooo00}..."
         else:
-            response = f"Invalid or expired key buy from OWNER- @{OWNER_USERNAME}..."
+            response = f"Invalid or expired key buy from OWNER- @{Neyooo00}..."
     else:
-        response = f"Usage: /redeem <key> if you don't  have  buy from  @{OWNER_USERNAME}..."
+        response = f"Usage: /redeem <key> if you don't  have  buy from  @{Neyooo00}..."
 
     await update.message.reply_text(response)
 
@@ -132,9 +132,9 @@ async def allusers(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 except Exception:
                     response += f"- User ID: {user_id} expires on {expiration_date}\n"
         else:
-            response = f"No data found OWNER- @{OWNER_USERNAME}..."
+            response = f"No data found OWNER- @{Neyooo00}..."
     else:
-        response = f"ONLY OWNER CAN USE.OWNER- @{OWNER_USERNAME}..."
+        response = f"ONLY OWNER CAN USE.OWNER- @{Neyooo00}..."
     await update.message.reply_text(response)
 
 
@@ -217,7 +217,7 @@ async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     response = f(
-        "Welcome to the Flooding Bot by OWNER- @{OWNER_USERNAME}...! Here are the available commands:\n\n"
+        "Welcome to the Flooding Bot by OWNER- @{Neyooo00}...! Here are the available commands:\n\n"
         "Admin Commands:\n"
         "/genkey <amount> <hours/days> - Generate a key with a specified validity period.\n"
         "/allusers - Show all authorized users.\n"
